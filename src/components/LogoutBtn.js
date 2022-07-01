@@ -1,7 +1,7 @@
 const LogoutBtn = () => {
     return (
         <div>
-            <button>Logout</button>
+            <button className="logout-btn">Logout</button>
         </div>
     )
 }

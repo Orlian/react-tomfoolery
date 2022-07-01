@@ -1,5 +1,5 @@
 import logo from '../assets/logo192.png';
-import LogoutBtn from '../components/LogoutBtn';
+import LogoutBtn from './LogoutBtn';
 
 const Header = (props) => {
     return (
