@@ -1,11 +1,12 @@
 .header {
     display: flex;
-    width: 100vw;
+    width: inherit;
     height: 4rem;
     justify-content: space-between;
     align-items: center;
     border-bottom: #555 solid 1px;
     box-shadow: 3px 3px 1rem #555;
+    padding: 0 1rem;
 
     .logo {
         height: 4rem;
