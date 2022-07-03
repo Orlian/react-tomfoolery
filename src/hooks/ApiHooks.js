@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const apiKeys = {
-    openAi: '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',
+    openAi: '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',
 }
 
 const doFetch = async (url, options = {}) => {
@@ -35,6 +35,7 @@ const useLogin = () => {
 const useOpenAi = () => {
     const [loading, setLoading] = useState(false);
     const getOpenAiResponse = async (url, options) => {
+        options.headers['Authorization'] = 'Bearer ' + apiKeys.openAi;
         try {
             setLoading(true);
             return await doFetch(url, options);

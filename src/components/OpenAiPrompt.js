@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { apiKeys, useOpenAi } from "../hooks/ApiHooks"
+import { useOpenAi } from "../hooks/ApiHooks"
 import { openAiBaseUrl } from "../utils/variables"
 import { Rings } from 'react-loader-spinner'
 
@@ -18,13 +18,12 @@ const OpenAiPrompt = (props) => {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': 'Bearer ' + apiKeys.openAi,
             },
             body: requestBody, // TODO: Normally would be JSON.stringify(inputs),
         }
         try {
             const response = await getOpenAiResponse(openAiUrl, formOptions);
-            setResponded(response.choices[0].text);
+            setResponded(response?.choices[0]?.text);
         } catch (err) {
             console.error('sendForm error:', err.message);
         }
