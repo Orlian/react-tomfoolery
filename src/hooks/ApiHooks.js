@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const apiKeys = {
-    openAi: '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',
+    openAi: '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',
 }
 
 const doFetch = async (url, options = {}) => {
@@ -14,23 +14,23 @@ const doFetch = async (url, options = {}) => {
     }
 }
 
-const useLogin = () => {
-    const [loading, setLoading] = useState(false);
-    const postLogin = async (inputs) => {
-        const fetchOptions = {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: inputs
-        }
-        try {
-            const response = await doFetch(); //TODO: Needs a hosting place for url
-        } catch (err) {
-            throw new Error('postLogin error:', err.message);
-        }
-    }
-}
+// const useLogin = () => {
+//     const [loading, setLoading] = useState(false);
+//     const postLogin = async (inputs) => {
+//         const fetchOptions = {
+//             method: 'POST',
+//             headers: {
+//                 'Content-Type': 'application/json',
+//             },
+//             body: inputs
+//         }
+//         try {
+//             const response = await doFetch(); //TODO: Needs a hosting place for url
+//         } catch (err) {
+//             throw new Error('postLogin error:', err.message);
+//         }
+//     }
+// }
 
 const useOpenAi = () => {
     const [loading, setLoading] = useState(false);

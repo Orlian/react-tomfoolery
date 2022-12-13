@@ -3,6 +3,8 @@ import { useOpenAi } from "../hooks/ApiHooks"
 import { openAiBaseUrl } from "../utils/variables"
 import { Rings } from 'react-loader-spinner'
 
+const aiActive = false;
+
 const OpenAiPrompt = (props) => {
     const [responded, setResponded] = useState('');
     const { getOpenAiResponse, loading } = useOpenAi();
@@ -43,4 +45,4 @@ const OpenAiPrompt = (props) => {
     )
 }
 
-export default OpenAiPrompt;
+export {OpenAiPrompt, aiActive};

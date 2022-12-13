@@ -1,9 +1,9 @@
-import OpenAiPrompt from "../components/OpenAiPrompt";
+import {OpenAiPrompt, aiActive} from "../components/OpenAiPrompt";
 
 const Main = () => {
     return (
         <>
-            <OpenAiPrompt/>
+            { aiActive && <OpenAiPrompt/>}
         </>
     );
 }
